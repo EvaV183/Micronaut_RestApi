@@ -17,28 +17,29 @@ Además, se utiliza **Swagger/OpenAPI** para documentar e interactuar con los en
 
 ## 📦 Estructura del proyecto
 
+```
 📁 Application/
-- 📁 src/
-  - 📁 main/
-    - 📁 java/
-      - 📁 com/eva/demo/
-        - Application.java
-        - Pelicula.java
-        - PeliculasController.java
-        - PeliculasRepository.java
-    - 📁 resources/
-      - application.properties
-      - logback.xml
-  - 📁 test/
-    - 📁 groovy/com/eva/demo/
-      - ApplicationSpec.groovy
-- docker-compose.yml
-- build.gradle
-- README.md
-- micronaut-cli.yml
-- openapi.properties
-- settings.gradle
-
+├── 📁 src/
+│   ├── 📁 main/
+│   │   ├── 📁 java/
+│   │   │   └── 📁 com/eva/demo/
+│   │   │       ├── Application.java
+│   │   │       ├── Pelicula.java
+│   │   │       ├── PeliculasController.java
+│   │   │       └── PeliculasRepository.java
+│   │   └── 📁 resources/
+│   │       ├── application.properties
+│   │       └── logback.xml
+│   └── 📁 test/
+│       └── 📁 groovy/com/eva/demo/
+│           └── ApplicationSpec.groovy
+├── docker-compose.yml
+├── build.gradle
+├── README.md
+├── micronaut-cli.yml
+├── openapi.properties
+└── settings.gradle
+```
 
 ## 🔧 Endpoints disponibles
 
