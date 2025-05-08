@@ -1,4 +1,4 @@
-package com.eva.demo
+package com.demo
 
 import io.micronaut.runtime.EmbeddedApplication
 import io.micronaut.test.extensions.spock.annotation.MicronautTest

@@ -1,4 +1,4 @@
-package com.eva.demo;
+package com.demo;
 
 import io.micronaut.core.annotation.NonNull;
 import io.micronaut.data.annotation.Id;
