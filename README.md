@@ -17,20 +17,20 @@ Además, se utiliza **Swagger/OpenAPI** para documentar e interactuar con los en
 
 ## 📦 Estructura del proyecto
 
-📁 Application/
-├── 📁 src/
-│   ├── 📁 main/
-│   │   ├── 📁 java/
-│   │   │   └── 📁 com/eva/demo/
+Application/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/eva/demo/
 │   │   │       ├── Application.java
 │   │   │       ├── Pelicula.java
 │   │   │       ├── PeliculasController.java
 │   │   │       └── PeliculasRepository.java
-│   │   └── 📁 resources/
+│   │   └── resources/
 │   │       ├── application.properties
 │   │       └── logback.xml
-│   └── 📁 test/
-│       └── 📁 groovy/com/eva/demo/
+│   └── test/
+│       └── groovy/com/eva/demo/
 │           └── ApplicationSpec.groovy
 ├── docker-compose.yml
 ├── build.gradle
