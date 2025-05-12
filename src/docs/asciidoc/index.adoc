@@ -1,18 +1,23 @@
 = 🎬 *RestAPI Peliculas*
+:toc: right
 
+****
 Este proyecto es una API REST desarrollada en Java utilizando el framework Micronaut, que permite gestionar una base de datos de películas. La aplicación expone endpoints para consultar, agregar y eliminar películas. Todo el entorno se levanta con Docker Compose, incluyendo una base de datos MySQL. Además, se utiliza Swagger/OpenAPI para documentar e interactuar con los endpoints de forma visual.
-
+****
 
 == 🚀 *Tecnologías utilizadas*
 
-    Java 17+
-    Micronaut Framework
-    MySQL
-    Swagger / OpenAPI
-    Docker & Docker Compose
+
+* Java 17+
+* Micronaut Framework
+* MySQL
+* Swagger / OpenAPI
+* Docker & Docker Compose
+
 
 
 == 📦 *Estructura del proyecto*
+
 
 ```
 📁 Application/
@@ -37,3 +42,77 @@ Este proyecto es una API REST desarrollada en Java utilizando el framework Micro
 ├── openapi.properties
 └── settings.gradle
 ```
+
+
+== 🧾 Diagramas UML
+****
+.Obtener todas las películas
+[plantuml, format="svg"]
+----
+@startuml
+actor Usuario
+participant "Servicio REST" as Servicio
+database "Base de Datos" as BD
+
+Usuario -> Servicio : 1. Petición HTTP (GET /Peliculas)
+Servicio -> BD : 2. Consulta SQL
+BD --> Servicio : 3. Resultados
+Servicio --> Usuario : 4. Respuesta HTTP (JSON)
+
+@enduml
+----
+****
+
+****
+.Obtener película por ID
+[plantuml, format="svg"]
+----
+@startuml
+actor Usuario
+participant "Servicio REST" as Servicio
+database "Base de Datos" as BD
+
+Usuario -> Servicio : 1. Petición HTTP (GET /Peliculas/{id})
+Servicio -> BD : 2. Consulta SQL
+BD --> Servicio : 3. Resultado
+Servicio --> Usuario : 4. Respuesta HTTP (JSON)
+
+@enduml
+----
+****
+
+****
+.Añadir película
+[plantuml, format="svg"]
+----
+@startuml
+actor Usuario
+participant "Servicio REST" as Servicio
+database "Base de Datos" as BD
+
+Usuario -> Servicio : 1. Petición HTTP (POST /Pelicula)
+Servicio -> BD : 2. Consulta SQL
+BD --> Servicio : 3. Resultado
+Servicio --> Usuario : 4. Respuesta HTTP (JSON)
+
+@enduml
+----
+****
+
+****
+.Borrar Película
+[plantuml, format="svg"]
+----
+@startuml
+actor Usuario
+participant "Servicio REST" as Servicio
+database "Base de Datos" as BD
+
+Usuario -> Servicio : 1. Petición HTTP (DELETE /Peliculas/{id}
+Servicio -> BD : 2. Consulta SQL
+BD --> Servicio : 3. Resultado
+Servicio --> Usuario : 4. Respuesta HTTP (JSON)
+
+@enduml
+----
+****
