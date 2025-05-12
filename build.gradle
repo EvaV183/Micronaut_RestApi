@@ -1,5 +1,6 @@
 plugins {
-    id("groovy") 
+    id("groovy")
+    id 'org.asciidoctor.jvm.convert' version '3.3.2'
     id("io.micronaut.application") version "4.5.3"
     id("com.gradleup.shadow") version "8.3.6"
     id("io.micronaut.test-resources") version "4.5.3"
@@ -66,4 +67,14 @@ tasks.named("dockerfileNative") {
     jdkVersion = "21"
 }
 
+asciidoctor{
+
+    resources {
+        from('src/docs/asciidoc/images') {
+            include '**/*.png'
+        }
+
+        into './images'
+    }
+}
 
