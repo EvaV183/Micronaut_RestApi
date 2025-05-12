@@ -22,7 +22,7 @@ Además, se utiliza **Swagger/OpenAPI** para documentar e interactuar con los en
 ├── 📁 src/
 │   ├── 📁 main/
 │   │   ├── 📁 java/
-│   │   │   └── 📁 com/eva/demo/
+│   │   │   └── 📁 com/demo/
 │   │   │       ├── Application.java
 │   │   │       ├── Pelicula.java
 │   │   │       ├── PeliculasController.java
@@ -31,7 +31,7 @@ Además, se utiliza **Swagger/OpenAPI** para documentar e interactuar con los en
 │   │       ├── application.properties
 │   │       └── logback.xml
 │   └── 📁 test/
-│       └── 📁 groovy/com/eva/demo/
+│       └── 📁 groovy/com/demo/
 │           └── ApplicationSpec.groovy
 ├── docker-compose.yml
 ├── build.gradle
