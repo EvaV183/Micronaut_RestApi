@@ -1,6 +1,5 @@
 Thumbs.db
 .DS_Store
-.github
 .gradle
 build/
 target/
@@ -14,4 +13,4 @@ out/
 .settings
 .classpath
 .factorypath
-docs/asciidoc/index.html
+src/docs/asciidoc/index.html
