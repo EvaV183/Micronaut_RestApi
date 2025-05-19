@@ -1,16 +1,14 @@
 package com.demo;
 
 import io.micronaut.core.annotation.NonNull;
-import io.micronaut.http.annotation.Controller;
-import io.micronaut.http.annotation.Delete;
-import io.micronaut.http.annotation.Get;
-import io.micronaut.http.annotation.Post;
+import io.micronaut.http.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
 @Controller("/peliculas")
 public class PeliculasController {
+
     PeliculasRepository peliculasRepository;
 
     public PeliculasController(PeliculasRepository peliculasRepository) {
@@ -19,16 +17,17 @@ public class PeliculasController {
 
     @Get
     public List<Pelicula> getAllPeliculas() {
-        return peliculasRepository.findAll();
+        var ret = peliculasRepository.findAll();
+        return ret;
     }
 
     @Get("/{id}")
-    public @NonNull Optional<Pelicula> show(Long id) {
+    public @NonNull Optional<Pelicula> getPelicula(Long id) {
         return peliculasRepository.findById(id);
     }
 
     @Post
-    public Pelicula addPelicula(@NonNull Pelicula pelicula) {
+    public Pelicula addPelicula(@NonNull @Body Pelicula pelicula) {
         return peliculasRepository.save(pelicula);
     }
 

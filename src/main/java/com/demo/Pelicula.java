@@ -8,12 +8,18 @@ import io.micronaut.serde.annotation.Serdeable;
 @Serdeable
 @MappedEntity("peliculas")
 public class Pelicula {
-    public String getTitulo() {
-        return titulo;
+    @Id
+    @GeneratedValue(GeneratedValue.Type.AUTO)
+    private Long id;
+    private String titulo;
+    private String director;
+
+    public Long getId() {
+        return id;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getDirector() {
@@ -24,18 +30,12 @@ public class Pelicula {
         this.director = director;
     }
 
-    public Long getId() {
-        return id;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
-
-    @Id
-    @GeneratedValue(GeneratedValue.Type.AUTO)
-    Long id;
-    String titulo;
-    String director;
 }
 
