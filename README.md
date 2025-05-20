@@ -4,6 +4,7 @@ Este proyecto es una API REST desarrollada en **Java** utilizando el framework *
 La aplicación expone endpoints para consultar, agregar y eliminar películas. 
 Todo el entorno se levanta con **Docker Compose**, incluyendo una base de datos **MySQL**. 
 Además, se utiliza **Swagger/OpenAPI** para documentar e interactuar con los endpoints de forma visual.
+Creación de **tests** que prueban el Controller y el Repository creados con **Spock Framework**.
 
 
 ## 🚀 Tecnologías utilizadas
@@ -13,6 +14,7 @@ Además, se utiliza **Swagger/OpenAPI** para documentar e interactuar con los en
 - **MySQL**
 - **Swagger / OpenAPI**
 - **Docker & Docker Compose**
+- **Testing con Spock Framework**
 
 
 ## 📦 Estructura del proyecto
