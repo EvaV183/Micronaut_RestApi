@@ -4,6 +4,7 @@ Este proyecto es una API REST desarrollada en **Java** utilizando el framework *
 La aplicación expone endpoints para consultar, agregar y eliminar películas. 
 Todo el entorno se levanta con **Docker Compose**, incluyendo una base de datos **MySQL**. 
 Además, se utiliza **Swagger/OpenAPI** para documentar e interactuar con los endpoints de forma visual.
+Creación de **tests** que prueban el Controller y el Repository creados con **Spock Framework**.
 
 
 ## 🚀 Tecnologías utilizadas
@@ -13,32 +14,48 @@ Además, se utiliza **Swagger/OpenAPI** para documentar e interactuar con los en
 - **MySQL**
 - **Swagger / OpenAPI**
 - **Docker & Docker Compose**
+- **Testing con Spock Framework**
 
 
 ## 📦 Estructura del proyecto
 
 ```
-📁 Application/
+Application/
 ├── 📁 src/
+│   ├── 📁 docs/
+│   │   ├── asciidoc/
+│   │       └── index.adoc
 │   ├── 📁 main/
 │   │   ├── 📁 java/
-│   │   │   └── 📁 com/demo/
-│   │   │       ├── Application.java
-│   │   │       ├── Pelicula.java
-│   │   │       ├── PeliculasController.java
-│   │   │       └── PeliculasRepository.java
-│   │   └── 📁 resources/
+│   │   │    └──📁 com/demo
+│   │   │           ├── Application.java
+│   │   │           ├── Pelicula.java
+│   │   │           ├── PeliculasController.java
+│   │   │           └── PeliculasRepository.java
+│   │   ├── 📁 resources/
 │   │       ├── application.properties
 │   │       └── logback.xml
-│   └── 📁 test/
-│       └── 📁 groovy/com/demo/
-│           └── ApplicationSpec.groovy
-├── docker-compose.yml
-├── build.gradle
+│   ├── 📁 test/
+│       ├── 📁 groovy/
+│       │   ├── 📁 com/
+│       │       ├── 📁 application/
+│       │       │   ├── Fixtures.groovy
+│       │       │   ├── PeliculasControllerSpec.groovy
+│       │       │   └── PeliculasRepositorySpec.groovy
+│       │       ├── 📁 demo/
+│       │           └── ApplicationSpec.groovy
+│       ├── 📁 resources/
+│           └── application-test.properties
 ├── README.md
+├── build.gradle
+├── docker-compose.yml
+├── gradle.properties
+├── gradlew
+├── gradlew.bat
 ├── micronaut-cli.yml
 ├── openapi.properties
 └── settings.gradle
+
 ```
 
 ## 🔧 Endpoints disponibles
