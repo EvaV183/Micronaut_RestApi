@@ -20,7 +20,6 @@ class PeliculasControllerSpec extends Specification {
     @Inject
     Fixtures fixtures
 
-    //Para limpiar la DB
     void setup() {
         fixtures.cleanDatabase()
     }

@@ -7,7 +7,7 @@ plugins {
     id("io.micronaut.aot") version "4.5.3"
 }
 
-version = "0.1"
+version = "0.0.2"
 group = "com.eva.demo"
 
 repositories {
@@ -31,7 +31,7 @@ dependencies {
 
 
 application {
-    mainClass = "com.eva.demo.Application"
+    mainClass = "com.demo.Application"
 }
 java {
     sourceCompatibility = JavaVersion.toVersion("21")
@@ -78,10 +78,14 @@ asciidoctor{
     }
 }
 
-
 asciidoctorj {
     modules {
         diagram.use()
         diagram.version '1.5.16'
     }
+}
+
+
+tasks.named("dockerBuild") {
+    images = ["evav183/peliculas:${version}".toString()]
 }

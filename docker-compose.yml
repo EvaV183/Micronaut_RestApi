@@ -19,6 +19,16 @@ services:
       # Where our data will be persisted
     volumes:
       - my-db:/var/lib/mysql
+
+  app:
+    image: "evav183/peliculas:0.0.1"
+    environment:
+      DATASOURCES_DEFAULT_URL: "jdbc:mysql://db:3306/demo1"
+    ports:
+      - '8080:8080'
+    expose:
+      - '8080'
+
 # Names our volume
 volumes:
   my-db:

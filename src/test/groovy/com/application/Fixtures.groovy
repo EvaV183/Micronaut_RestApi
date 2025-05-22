@@ -12,7 +12,7 @@ class Fixtures {
     @Transactional
     Pelicula crearPelicula(String titulo, String director) {
         def pelicula = new Pelicula(titulo: titulo, director: director)
-        return peliculasRepository.save(pelicula);
+        return peliculasRepository.save(pelicula)
     }
 
     @Transactional

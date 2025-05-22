@@ -1,6 +1,7 @@
-package com.demo
+package com.application
 
-import com.application.Fixtures
+
+import com.demo.PeliculasRepository
 import io.micronaut.http.client.HttpClient
 import io.micronaut.http.client.annotation.Client
 import io.micronaut.test.extensions.spock.annotation.MicronautTest
