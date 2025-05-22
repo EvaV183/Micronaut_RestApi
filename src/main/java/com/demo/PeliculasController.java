@@ -36,7 +36,7 @@ public class PeliculasController {
         peliculasRepository.deleteById(id);
     }
 
-    @Delete("/{all}")
+    @Delete()
     public void deleteAllPeliculas() {
         peliculasRepository.deleteAll();
     }
