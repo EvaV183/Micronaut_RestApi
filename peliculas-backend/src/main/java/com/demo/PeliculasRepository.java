@@ -6,12 +6,16 @@ import io.micronaut.data.jdbc.annotation.JdbcRepository;
 import io.micronaut.data.model.query.builder.sql.Dialect;
 import io.micronaut.data.repository.PageableRepository;
 
+import java.util.List;
 
-    @JdbcRepository(dialect = Dialect.MYSQL)
+
+@JdbcRepository(dialect = Dialect.MYSQL)
     public interface PeliculasRepository extends PageableRepository<Pelicula, Long> {
 
         Pelicula save(@NonNull String titulo, @NonNull String director);
 
-        long update(@NonNull @Id Long id, @NonNull String titulo);
+        long update(@NonNull @Id Long id, @NonNull String titulo, @NonNull String director);
+
+        List<Pelicula> findByTituloAndDirectorLike(String titulo, String director);
     }
 

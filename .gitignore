@@ -1,3 +1,4 @@
+# --- Java / Micronaut ---
 Thumbs.db
 .DS_Store
 .gradle
@@ -14,3 +15,33 @@ out/
 .classpath
 .factorypath
 src/docs/asciidoc/index.html
+
+# --- Angular / Node (Global) ---
+node_modules/
+dist/
+.angular/
+coverage/
+.tmp/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+.env
+.env.*.local
+*.tsbuildinfo
+
+# --- Angular frontend específico ---
+peliculas-frontend/dist/
+peliculas-frontend/tmp/
+peliculas-frontend/out-tsc/
+peliculas-frontend/bazel-out/
+peliculas-frontend/node_modules/
+peliculas-frontend/.angular/cache/
+peliculas-frontend/.sass-cache/
+peliculas-frontend/coverage/
+peliculas-frontend/.vscode/
+peliculas-frontend/.history/
+peliculas-frontend/.DS_Store
+peliculas-frontend/Thumbs.db
+peliculas-frontend/npm-debug.log
+peliculas-frontend/yarn-error.log

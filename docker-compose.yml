@@ -25,7 +25,7 @@ services:
     environment:
       DATASOURCES_DEFAULT_URL: "jdbc:mysql://db:3306/demo1"
     ports:
-      - '8080:8080'
+      - '8085:8080'
     expose:
       - '8080'
 
